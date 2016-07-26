@@ -1,0 +1,18 @@
+{
+  "name": "gulp-angularjs",
+  "version": "1.0.0",
+  "description": "angularJS, Sass, Gulp Project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spelar/gulp-angularjs.git"
+  },
+  "author": "Sungsu Kim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spelar/gulp-angularjs/issues"
+  },
+  "homepage": "https://github.com/spelar/gulp-angularjs#readme"
+}
