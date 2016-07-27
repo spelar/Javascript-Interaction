@@ -14,5 +14,21 @@
   "bugs": {
     "url": "https://github.com/spelar/gulp-angularjs/issues"
   },
-  "homepage": "https://github.com/spelar/gulp-angularjs#readme"
+  "homepage": "https://github.com/spelar/gulp-angularjs#readme",
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.1.0",
+    "browserify-shim": "^3.8.12",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "^3.0.7",
+    "spin.js": "^2.3.2",
+    "uglify-js": "^2.7.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  }
 }

@@ -17,5 +17,24 @@
   "dependencies": {
     "jquery": "^3.1.0",
     "angular": "^1.5.8"
+  },
+  "scripts": {
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./src/js/lib/jquery/dist/jquery.min.js",
+    "angular": "./src/js/lib/angular/angular.min.js"
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "angular": {
+      "exports": "angular"
+    }
   }
 }
