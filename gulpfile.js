@@ -11,3 +11,9 @@ var	browserify = require('browserify');
 var	source = require('vinyl-source-stream');
 var	buffer = require('vinyl-buffer');
 var	config = require('./config');
+
+gulp.task('default', ['watch']);
+
+gulp.task('watch', function(){
+  gulp.watch(config.paths.sass.src, ['sass']);
+});
