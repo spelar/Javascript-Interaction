@@ -3,11 +3,19 @@
 var root = './src/';
 
 var paths = {
+  'sass': {
+		'src': root + 'sass/**/*.{sass,scss}',
+		'dest': root + 'css'
+	}
+};
+
+var options = {
 	'sass': {
-		'src':  root + 'sass/**/*.{sass,scss}'
+		'outputStyle': 'compressed'
 	}
 };
 
 module.exports = {
-  'paths': paths
-}
+	'paths': paths,
+	'options': options
+};
