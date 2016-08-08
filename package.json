@@ -29,5 +29,22 @@
     "uglify-js": "^2.7.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
+  "browser": {
+    "jquery": "./src/js/lib/jquery/dist/jquery.min.js",
+    "underscore": "./src/js/lib/underscore/underscore-min.js"
+  },
+  "browserify-shim": {
+    "jquery": {
+      "exports": "$"
+    },
+    "underscore": {
+      "exports": "_"
+    }
   }
 }
