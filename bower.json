@@ -1,12 +1,12 @@
 {
-  "name": "gulp-angularjs",
-  "description": "angularJS, Sass, Gulp Project",
+  "name": "gulp-sass-ajax",
+  "description": "Sass, Gulp, Ajax Project",
   "main": "",
   "authors": [
     "Sungsu Kim"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/spelar/gulp-angularjs",
+  "homepage": "https://github.com/spelar/Javascript-Interaction",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -15,8 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "^3.1.0",
-    "angular": "^1.5.8"
+    "jquery": "^3.1.0"
   },
   "scripts": {
   },
@@ -26,15 +25,11 @@
     ]
   },
   "browser": {
-    "jquery": "./src/js/lib/jquery/dist/jquery.min.js",
-    "angular": "./src/js/lib/angular/angular.min.js"
+    "jquery": "./src/js/lib/jquery/dist/jquery.min.js"
   },
   "browserify-shim": {
     "jquery": {
       "exports": "$"
-    },
-    "angular": {
-      "exports": "angular"
     }
   }
 }

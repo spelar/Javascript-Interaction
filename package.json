@@ -1,22 +1,21 @@
 {
-  "name": "gulp-angularjs",
+  "name": "gulp-sass-ajax",
   "version": "1.0.0",
-  "description": "angularJS, Sass, Gulp Project",
+  "description": "Gulp, Sass, Ajax Project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/spelar/gulp-angularjs.git"
+    "url": "git+https://github.com/spelar/Javascript-Interaction.git"
   },
   "author": "Sungsu Kim",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/spelar/gulp-angularjs/issues"
+    "url": "https://github.com/spelar/Javascript-Interaction/issues"
   },
-  "homepage": "https://github.com/spelar/gulp-angularjs#readme",
+  "homepage": "https://github.com/spelar/Javascript-Interaction#readme",
   "devDependencies": {
-    "angular": "^1.5.8",
     "browser-sync": "^2.13.0",
     "browserify": "^13.1.0",
     "browserify-shim": "^3.8.12",
