@@ -1,15 +1,17 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-require('jquery');
-require('underscore');
+var $ = require('jquery');
+var _ = require('underscore');
 
 
-function DataLoad(url, num){
-  this.init(url, num);
-}
+var DataLoad = function(url, num, selector){
+  this.element = null;
+  this.init(url, num, selector);
+};
 
-DataLoad.prototype.init = function(dataUrl, offset){
+DataLoad.prototype.init = function(dataUrl, offset, selector){
+  this.element = $(selector);
   var objThis = this;
   $.ajax({
     method: "GET",
@@ -20,11 +22,11 @@ DataLoad.prototype.init = function(dataUrl, offset){
       objThis.render(itemData);
     })
   });
-}
+};
 
 DataLoad.prototype.render = function(data){
-  $(".contents-wrap").append(this.itemTempleat(data));
-}
+  this.element.append(this.itemTempleat(data));
+};
 
 DataLoad.prototype.itemTempleat = _.template(
 '<tr>'+
@@ -35,8 +37,26 @@ DataLoad.prototype.itemTempleat = _.template(
   '<td><%= phone %></td>'+
 '</tr>');
 
-var randomUserApp = new DataLoad("http://api.randomuser.me/?results=", 3);
-console.dir(randomUserApp);
+var DataLoad2 = function(url, num, selector){
+  this.element = null;
+  this.init(url, num, selector);
+};
+
+_.extend(DataLoad2.prototype, DataLoad.prototype)
+
+DataLoad2.prototype.itemTempleat = _.template(
+'<tr>'+
+  '<td><img src="<%= picture.large %>"/></td>'+
+  '<td style="color:red"><%= gender %></td>'+
+  '<td><%= name.last %> <%= name.first %></td>'+
+  '<td style="color:red"><%= email %></td>'+
+  '<td><%= phone %></td>'+
+'</tr>');
+
+$(function(){
+  var randomUserApp = new DataLoad("http://api.randomuser.me/?results=", 3, '.contents-wrap');
+  var randomUserApp2 = new DataLoad2("http://api.randomuser.me/?results=", 3, '.content');
+});
 
 },{"jquery":2,"underscore":3}],2:[function(require,module,exports){
 (function (global){
